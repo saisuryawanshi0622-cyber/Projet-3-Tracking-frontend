@@ -1,5 +1,5 @@
-// ⚠️ IMPORTANT: Replace this URL with your actual Render backend URL
-const BACKEND_URL = 'https://smart-chip-2-backend.onrender.com'; 
+// ⚠️ Backend and frontend are hosted together, so use the same origin or Render URL.
+const BACKEND_URL = 'https://projet-3-tracking.onrender.com';
 const socket = io(BACKEND_URL);
 
 const inputSessionId = document.getElementById('input-session-id');

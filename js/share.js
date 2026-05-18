@@ -1,5 +1,5 @@
-// ⚠️ IMPORTANT: Replace this URL with your actual Render backend URL
-const BACKEND_URL = 'https://smart-chip-2-backend.onrender.com';
+// ⚠️ Backend and frontend are hosted together, so use the same origin or Render URL.
+const BACKEND_URL = 'https://projet-3-tracking.onrender.com';
 const socket = io(BACKEND_URL);
 
 const btnShare = document.getElementById('btn-share');
@@ -78,7 +78,9 @@ function setupSession() {
 
     sessionIdEl.innerText = currentSessionId;
 
-    const viewerUrl = `${window.location.origin}/viewer.html?session=${currentSessionId}`;
+    const url = new URL('viewer.html', window.location.href);
+    url.searchParams.set('session', currentSessionId);
+    const viewerUrl = url.href;
     shareLink.href = viewerUrl;
     shareLink.innerText = viewerUrl;
 
