@@ -15,7 +15,8 @@
     <div id="viewer-overlay" class="glass-container overlay active">
         <h1>View Location</h1>
         <p>Enter the session ID to track live location</p>
-        <input type="text" inputmode="numeric" pattern="[0-9]*" id="input-session-id" placeholder="e.g. 123456" class="input-field">
+        <input type="text" inputmode="numeric" pattern="[0-9]*" id="input-session-id" placeholder="e.g. 123456"
+            class="input-field">
         <button id="btn-track" class="btn primary">Start Tracking</button>
         <p id="viewer-status"></p>
         <div style="margin-top: 2rem;">
@@ -34,7 +35,7 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
     <script src="./js/viewer.js"></script>
 </body>
 
